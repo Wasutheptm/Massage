@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: crimson;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    position: relative;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+/* ... (skip) ... */
+
+.gradient-custom-2 {
+    background: #fccb90;
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+}
+
+body {
+    background-color: #eee;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.navbar {
+    background: #fccb90;
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+/* Additional Styling for Bootstrap */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-body h4 {
+    font-size: 2.5rem; /* ปรับขนาดฟอนต์ของข้อความใน card-body */
+}
+
+.form-outline input {
+    font-size: 1.2rem; /* ปรับขนาดฟอนต์ของ input fields */
+}
+
+.btn-primary {
+    background-color: #ff5733; /* ปรับสีของปุ่ม Log in */
+    border-color: #ff5733;
+    color: #fff;
+}
+
+.btn-outline-danger {
+    color: #ff5733; /* ปรับสีของปุ่ม Create new */
+    border-color: #ff5733;
+}
+
+.gradient-custom-2 {
+    background: linear-gradient(45deg, #ff5733, #ffaf40); /* ปรับสีพื้นหลังของ gradient-custom-2 */
+}
+

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suchila Thai Massage</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: url('Asset/bg.jpg') center center fixed;
+            background-size: cover;
+        }
+
+        .navbar {
+            background: #fccb90;
+            background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+            background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+        }
+
+        .card {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #dcedf0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card-title {
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background-color: #236ebf;
+            border-color: #2acc9b;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .video-container,
+        .profile-video,
+        .full-width-image {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 50%;
+            border-radius: 10px;
+        }
+
+        .profile-image,
+        .full-width-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .video-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .popup-content img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img src="Asset/SuchilaMasterLogo_RedBG.png" width="250px" height="80px" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="continual.html">continual After care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Massage Treatment List as Cards -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4" style="background-color: #dcedf0; padding: 10px; border-radius: 10px;">
+            <span style="color: navy; font-weight: bold;">Massage Treatments</span>
+        </h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Aromatherapy</h5>
+                        <p class="card-text">1hr $40 | 1.5hrs</p>
+                        <button class="btn btn-primary" onclick="openPopup('aromatherapyPopup')">Read more</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Facelift Massage</h5>
+                        <p class="card-text">1hr $40</p>
+                        <button class="btn btn-primary" onclick="openPopup('faceliftPopup')">Read more</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Neck, Back & Shoulder</h5>
+                        <p class="card-text">30 mins $25 | 1hr $40 | 1.5hrs $55</p>
+                        <button class="btn btn-primary" onclick="openPopup('neckBackShoulderPopup')">Read more</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Traditional Thai Massage (on the floor)</h5>
+                        <p class="card-text">1hr $40 | 1.5hrs $55</p>
+                        <button class="btn btn-primary" onclick="openPopup('traditionalThaiMassagePopup')">Read
+                            more</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Thai Oil Massage</h5>
+                        <p class="card-text">1hr $40 | 1.5hrs $55</p>
+                        <button class="btn btn-primary" onclick="openPopup('thaiOilMassagePopup')">Read more</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Thai Foot Massage & Reflexology</h5>
+                        <p class="card-text">1hr $40</p>
+                        <button class="btn btn-primary" onclick="openPopup('thaiFootMassagePopup')">Read more</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Deep Tissue Massage</h5>
+                        <p class="card-text">1hr $40 | 1.5hrs $55</p>
+                        <button class="btn btn-primary" onclick="openPopup('deepTissueMassagePopup')">Read more</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- เพิ่มการ์ดเพิ่มเติมตามต้องการ -->
+
+        </div>
+    </div>
+
+    <!-- Popups -->
+    <div class="popup-container" id="aromatherapyPopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('aromatherapyPopup')">&times;</span>
+            <h2>Aromatherapy</h2>
+            <img src="photo_service/aroma.jpeg" alt="Aromatherapy Image">
+            <p>Aromatherapy is a form of massage that uses essential oils extracted from plants, known as "essential
+                oils," to create a sensory experience that impacts both physical and mental well-being. Essential oils
+                are often derived from flowers, fruits, leaves, or roots of various plants and have aromatic properties
+                that can contribute to relaxation and mood enhancement.
+
+                In aromatherapy massage, essential oils are typically combined with massage techniques applied to the
+                body or specific areas that may be experiencing tension or discomfort, such as the back, shoulders, or
+                neck. This practice aims to reduce stress, promote muscle relaxation, and enhance overall relaxation in
+                the body.
+
+                The essential oils used in aromatherapy have various health benefits, such as relieving stress,
+                alleviating pain, stimulating blood circulation, or even promoting better sleep. It is essential to note
+                that using aromatherapy should be done by individuals with knowledge of essential oils, and it's
+                advisable to start with small amounts to prevent allergic reactions and allow the body to adjust to the
+                aromas before using larger quantities.
+
+            </p>
+        </div>
+    </div>
+
+    <div class="popup-container" id="faceliftPopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('faceliftPopup')">&times;</span>
+            <h2>Facelift Massage</h2>
+            <img src="photo_service/Facelift Massage.jpg" alt="Facelift Massage Image">
+            <p>Facelift Massage is a non-invasive massage technique designed to rejuvenate and tone the facial muscles,
+                contributing to a more youthful appearance. While it doesn't provide the same results as surgical
+                facelifts, this massage focuses on promoting relaxation, improving blood circulation, and stimulating
+                the muscles of the face.</p>
+        </div>
+    </div>
+
+    <div class="popup-container" id="neckBackShoulderPopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('neckBackShoulderPopup')">&times;</span>
+            <h2>Neck, Back & Shoulder Massage</h2>
+            <img src="photo_service/naeck.jpg" alt="neckBackShoulderPopup">
+            <p>A Neck, Back & Shoulder Massage is a therapeutic massage that focuses specifically on the muscles and
+                areas of tension in the neck, upper back, and shoulders. This type of massage is designed to alleviate
+                discomfort, reduce muscle tension, and promote relaxation in the targeted areas.</p>
+        </div>
+    </div>
+
+    <div class="popup-container" id="traditionalThaiMassagePopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('traditionalThaiMassagePopup')">&times;</span>
+            <h2>Traditional Thai Massage (on the floor)</h2>
+            <img src="photo_service/Traditional Thai Massage.jpg" alt="traditionalThaiMassagePopup">
+            <p>Traditional Thai Massage, often performed on the floor, is a unique and ancient healing art that
+                originated in Thailand. It is a form of bodywork that combines acupressure, stretching, and assisted
+                yoga postures. Here are key aspects of Traditional Thai Massage performed on the floor:</p>
+        </div>
+    </div>
+
+    <div class="popup-container" id="thaiOilMassagePopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('thaiOilMassagePopup')">&times;</span>
+            <h2>Thai Oil Massage</h2>
+            <img src="photo_service/Thai Oil Massage.avif" alt="thaiOilMassagePopup">
+            <p>Thai Oil Massage is a popular and therapeutic massage technique that combines traditional Thai massage
+                elements with the use of aromatic oils. It offers a more gentle and soothing experience compared to
+                Traditional Thai Massage. Here are key features of Thai Oil Massage:</p>
+        </div>
+    </div>
+
+    <div class="popup-container" id="thaiFootMassagePopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('thaiFootMassagePopup')">&times;</span>
+            <h2>Thai Foot Massage & Reflexology</h2>
+            <img src="photo_service/Thai Foot Massage & Reflexology.avif" alt="thaiFootMassagePopup">
+            <p>Thai Foot Massage, also known as Thai Foot Reflexology, is a therapeutic massage technique that focuses
+                on the feet and lower legs. It is based on the principles of reflexology, which involves applying
+                pressure to specific points on the feet that are believed to correspond to various organs and systems in
+                the body. Here are key features of Thai Foot Massage & Reflexology:</p>
+        </div>
+    </div>
+
+    <div class="popup-container" id="deepTissueMassagePopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('deepTissueMassagePopup')">&times;</span>
+            <h2>Deep Tissue Massage</h2>
+            <img src="photo_service/Deep Tissue Massage.webp" alt="deepTissueMassagePopup">
+            <p>Deep Tissue Massage is a therapeutic massage technique that focuses on reaching the deeper layers of
+                muscles and connective tissue. It is designed to address chronic muscle tension, injuries, and areas of
+                the body that might be tight or painful. Here are key features of Deep Tissue Massage:</p>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <!-- Function to Open Popup -->
+    <script>
+        function openPopup(popupId) {
+            var popup = document.getElementById(popupId);
+            popup.style.display = 'block';
+        }
+
+        function closePopup(popupId) {
+            var popup = document.getElementById(popupId);
+            popup.style.display = 'none';
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

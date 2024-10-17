@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Suchila Thai Massage</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MDBootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/mdbootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/mdbootstrap/css/mdb.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="main.css">
+    <style>
+        html,
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+            /* รักษาอัตราส่วน (16:9) สำหรับวิดีโอ */
+        }
+
+        .profile-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-left,
+        .content-right {
+            max-width: 100%;
+        }
+
+        .profile-image,
+        .profile-video {
+            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .content-left img,
+        .content-right img {
+            width: 100%;
+            height: auto;
+        }
+
+        body {
+            background: linear-gradient(to left, #ee7724, #d8363a, #dd3675, #b44593);
+            color: #ffffff;
+        }
+
+        nav.navbar.fixed-bottom {
+            /* ปรับความสูงของ Navbar ตามที่ต้องการ */
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0c0101;
+            color: #ffffff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav.navbar.fixed-bottom p {
+            margin: 0;
+        }
+
+
+        .container.mt-8 {
+            width: 1500px;
+            height: 900px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img src="Asset/SuchilaMasterLogo_RedBG.png" width="250px" height="80px" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="continual.html">continual After care</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQ.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container mt-8">
+        <!-- Bootstrap Grid System -->
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-md-6">
+                <div class="content-left text-start">
+                    <p class="lead">Cupping therapy is a form of pseudoscience in which a local suction is created on
+                        the
+                        skin
+                        with the application of heated cups. As alternative medicine, it is practiced primarily in Asia
+                        but
+                        also in Eastern Europe, the Middle East, and Latin America. Cupping therapy is an ancient
+                        healing
+                        method that may ease back pain, neck pain, headaches, and other issues. It uses suction to pull
+                        on
+                        your skin and increase blood flow to the affected area.</p>
+                    <h2 class="display-5" style="font-weight: bold; color: navy; ">How effective is cupping?</h2>
+
+                    <ul>
+                        <!-- ... (Add other items as needed) ... -->
+                    </ul>
+                    <p class="lead">Please note: Cupping may cause bruising and could take up to a week to disappear.
+                    </p>
+                </div>
+            </div>
+            <!-- Right Column -->
+            <div class="col-md-6">
+                <div class="profile bg-gradient-primary-to-secondary text-center video-container">
+                    <!-- TIP: For best results, use a video with a suitable format like MP4 -->
+                    <<video class="profile-video" autoplay loop muted playsinline>
+                        <source src="Video/massage4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                        </video>
+                        
+                </div>
+                <div class="content-right text-start">
+                    <p class="lead">Aromatherapy is a form of massage that uses essential oils extracted from
+                        plants, known as "essential oils," to create a sensory experience that impacts both physical
+                        and mental well-being. Essential oils are often derived from flowers, fruits, leaves, or
+                        roots of various plants and have aromatic properties that can contribute to relaxation and
+                        mood enhancement. In aromatherapy</p>
+                </div>
+            </div>
+            
+            </div>
+            <nav class="navbar fixed-bottom">
+                <P>Suchila Thai Massage</P>
+            </nav>
+    </main>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- MDBootstrap JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mdbootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mdbootstrap/js/mdb.min.js"></script>
+</body>
+
+</html>
